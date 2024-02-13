@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'tiddlywiki-starter-kit',
+  name: 'tiddlywik-oxenv',
   server: {
     port: 8000,
     // host: '0.0.0.0',
@@ -8,8 +8,8 @@ module.exports = {
     zen: true,
     open: false // NOTE: pm2 or pm2 cron restart will open also
   },
-  username: 'oeyoews',
-  password: 'oeyoews',
+  username: 'oxenv',
+  password: 'oxenv',
   output: '.tiddlywiki',
   // debug: false,
   wiki: 'src',
