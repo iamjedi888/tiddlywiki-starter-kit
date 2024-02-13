@@ -1,0 +1,51 @@
+{
+  "name": "tiddlywiki-starter-kit",
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "A modern style notebook based on tiddlywiki",
+  "version": "4.1.0",
+  "author": "oeyoews <jyao4783@gmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@8.8.0",
+  "scripts": {
+    "new": "node lib/newplugin.mjs",
+    "build": "node lib/build.mjs",
+    "update:tw": "pnpm install github:Jermolene/TiddlyWiki5",
+    "build-with-bun": "bun run ./lib/build.ts",
+    "format": "prettier  --write .",
+    "format:md": "autocorrect --fix",
+    "build:docker": "docker-compose build",
+    "docker:push": "docker-compose push",
+    "dev": "node ./lib/startup.mjs",
+    "start:pm2": "node ./lib/pm2-control.js"
+  },
+  "dependencies": {
+    "address": "^1.2.2",
+    "chalk": "^5.3.0",
+    "ci-info": "^3.9.0",
+    "cross-spawn": "^7.0.3",
+    "dotenv": "^16.3.2",
+    "fs-extra": "^11.2.0",
+    "get-port": "^7.0.0",
+    "open": "^10.0.3",
+    "ora": "^6.3.1",
+    "pm2": "^5.3.1",
+    "prompts": "^2.4.2",
+    "qrcode": "^1.5.3",
+    "randomstring-plus": "workspace:^",
+    "tiddlywiki": "5.3.3",
+    "tiged": "^2.12.5"
+  },
+  "prettier": "@oeyoews/prettier-config",
+  "devDependencies": {
+    "terser": "^5.27.0",
+    "tw5-typed": "^0.4.4",
+    "@oeyoews/prettier-config": "workspace:^",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/prompts": "^2.4.9",
+    "@types/qrcode": "^1.5.5"
+  }
+}
